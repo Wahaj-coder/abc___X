@@ -67,6 +67,8 @@ def wow(content: List):
     return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
 def wosssssssssssssssw(content: List):
     return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
+def woss(content: List):
+    return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
 
 
 def ingest_data(client: redis.Redis, data):
