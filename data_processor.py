@@ -63,7 +63,7 @@ def fetch_data(url):
 def get_embeddings(content: List):
     return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
 
-def wowwwwwwwwwwwwwww(content: List):
+def wow(content: List):
     return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
 
 
