@@ -36,7 +36,45 @@ gemini = GoogleAIGeminiGenerator(api_key=Secret.from_env_var("GEMINI_API_KEY"), 
 def get_embeddings(content: List):
     return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
 
+# ------------------ Sample Method 1 ------------------
+def calculate_factorial(n: int) -> int:
+    """
+    Calculates the factorial of a given number using recursion.
+    
+    Args:
+        n (int): The number for which factorial is to be calculated.
+    
+    Returns:
+        int: Factorial of the input number.
+    
+    Example:
+        >>> calculate_factorial(5)
+        120
+    """
+    if n <= 1:
+        return 1
+    return n * calculate_factorial(n - 1)
 
+# ------------------ Sample Method 2 ------------------
+def is_palindrome(s: str) -> bool:
+    """
+    Checks if the given string is a palindrome.
+    
+    Args:
+        s (str): Input string to check.
+    
+    Returns:
+        bool: True if the string is a palindrome, False otherwise.
+    
+    Example:
+        >>> is_palindrome("racecar")
+        True
+        >>> is_palindrome("hello")
+        False
+    """
+    cleaned = ''.join(c.lower() for c in s if c.isalnum())
+    return cleaned == cleaned[::-1]
+  
 def draft_prompt(query: str, chat_history: str) -> str:
     """
     Perform a vector similarity search and retrieve related functions.
