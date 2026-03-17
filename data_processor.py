@@ -63,6 +63,10 @@ def fetch_data(url):
 def get_embeddings(content: List):
     return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
 
+def wowwwwwwwwwwwwwww(content: List):
+    return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
+
+
 def ingest_data(client: redis.Redis, data):
     try:
        client.delete(client.keys("code:*"))
