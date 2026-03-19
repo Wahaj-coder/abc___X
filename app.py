@@ -45,6 +45,10 @@ def demo2(content: List):
 def notget(content: List):
     return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
     print("DLL")
+
+def notget(content: List):
+    return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
+    print("DLL")
           
 # ------------------ Sample Method 1 ------------------
 def calculate_factorial(n: int) -> int:
@@ -268,15 +272,3 @@ if selected_tab == 'Assistant':
 
     with st.expander("See Chat History"):
         st.markdown(st.session_state.response)
-  def caldemo(n: int) -> int:
-    """
-    Calculates the factorial of a given number using recursion.
-    
-    Args:
-        n (int): The number for which factorial is to be calculated.
-    
-    Returns:
-        int: Factorial of the input number.
-    
-    Example:
-        >>> calculate_factorial(5)
