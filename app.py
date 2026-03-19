@@ -40,6 +40,9 @@ def get_s(content: List):
 def demo1(content: List):
     return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
 
+def demojjj2(content: List):
+    return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
+
 def demo2(content: List):
     return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
 
