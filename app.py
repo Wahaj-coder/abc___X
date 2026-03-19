@@ -36,6 +36,12 @@ gemini = GoogleAIGeminiGenerator(api_key=Secret.from_env_var("GEMINI_API_KEY"), 
 def get_embeddings(content: List):
     return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
 
+def demo1(content: List):
+    return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
+
+def demo2(content: List):
+    return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
+
 def notget(content: List):
     return genai.embed_content(model='models/text-embedding-004',content=content)['embedding']
     print("DLL")
