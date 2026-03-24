@@ -50,6 +50,20 @@ def get_description(code):
       response = chat_session.send_message("INSERT_INPUT_HERE")
 
       return response.text
+def get_dn(code):
+      chat_session = model.start_chat(
+        history=[
+          {
+            "role": "user",
+            "parts": [
+              f"Code: {code}",
+            ],
+          },
+        ]
+      )
+      response = chat_session.send_message("INSERT_INPUT_HERE")
+
+      return response.text
 def fetch_data(url):
     def get_description(code):
       chat_session = model.start_chat(
