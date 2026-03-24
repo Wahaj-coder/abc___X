@@ -36,6 +36,20 @@ model = genai.GenerativeModel(
   system_instruction="You are optimized to generate accurate descriptions for given Python codes. When the user inputs the code, you must return the description according to its goal and functionality.  You are not allowed to generate additional details. The user expects at least 5 sentence-long descriptions.",
 )
 
+def get_description(code):
+      chat_session = model.start_chat(
+        history=[
+          {
+            "role": "user",
+            "parts": [
+              f"Code: {code}",
+            ],
+          },
+        ]
+      )
+      response = chat_session.send_message("INSERT_INPUT_HERE")
+
+      return response.text
 def fetch_data(url):
     def get_description(code):
       chat_session = model.start_chat(
