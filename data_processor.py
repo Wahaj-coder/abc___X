@@ -35,7 +35,8 @@ model = genai.GenerativeModel(
   generation_config=generation_config,
   system_instruction="You are optimized to generate accurate descriptions for given Python codes. When the user inputs the code, you must return the description according to its goal and functionality.  You are not allowed to generate additional details. The user expects at least 5 sentence-long descriptions.",
 )
-
+def nameee()
+    print("HEllo")
 def get_description(code):
       chat_session = model.start_chat(
         history=[
