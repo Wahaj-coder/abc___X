@@ -160,3 +160,7 @@ def ff():
 def fff():
 
     print("!1")
+
+def fxff():
+
+    print("!1")
