@@ -157,3 +157,6 @@ def ingest_data(client: redis.Redis, data):
 def ff():
 
     print("!1")
+def fff():
+
+    print("!1")
