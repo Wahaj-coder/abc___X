@@ -154,13 +154,3 @@ def ingest_data(client: redis.Redis, data):
     num_docs = info["num_docs"]
     indexing_failures = info["hash_indexing_failures"]
     return f"{num_docs} documents indexed with {indexing_failures} failures"
-def ff():
-
-    print("!1")
-def fff():
-
-    print("!1")
-
-def fxff():
-
-    print("!1")
